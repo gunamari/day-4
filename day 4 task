@@ -1,0 +1,260 @@
+1.Print odd numbers in an array
+Anonymous
+
+function(arr){
+for(var i=0;i<arr.length;i++){
+if (arr[i]%2!=0){
+console.log(arr[i])
+    }
+  
+}
+}
+
+IIFE
+
+(function(arr){
+for(var i=0;i<arr.length;i++){
+if (arr[i]%2!=0){
+console.log(arr[i])
+    }
+  
+}
+})([1,23,45,65])
+
+Arrow function
+oddNumbers=(arr)=>{
+
+for(var i=0;i<arr.length;i++){
+if (arr[i]%2!=0){
+console.log(arr[i])
+    }
+  
+}
+}
+
+2.Convert all the stings to title caps in a string array
+
+ANONYMOUS
+function(str){
+str=str.toLowerCase().split(' ');
+for(var i=0;i<str.length;i++){
+str[i]=str[i].charAt(0).toUpperCase() + str[i].slice(1);
+} 
+return str.join(' ');
+}
+
+IIFE
+(function(str){
+str=str.toLowerCase().split(' ');
+for(var i=0;i<str.length;i++){
+str[i]=str[i].charAt(0).toUpperCase() + str[i].slice(1);
+} 
+return str.join(' ');
+});
+
+ARROW
+tittleCaps=(str)=>{
+
+str=str.toLowerCase().split(' ');
+for(var i=0;i<str.length;i++){
+str[i]=str[i].charAt(0).toUpperCase() + str[i].slice(1);
+} 
+return str.join(' ');
+}
+
+3. SUM OF ALL NUMBERS IN ARRAY
+
+ANONYMOUS
+function(arr){
+var sum=0;
+   for(var i=0;i<arr.length;i++){
+   sum=sum=arr[i];
+   }
+   return sum;
+   }
+   
+   IIFE  
+        (function(arr){
+var sum=0;
+   for(var i=0;i<arr.length;i++){
+   sum=sum=arr[i];
+   }
+   console.log( sum);
+   }
+   
+  ARROW
+  
+  sum=(arr)=>{
+var sum=0;
+   for(var i=0;i<arr.length;i++){
+   sum=sum=arr[i];
+   }
+   return sum;
+   }
+   
+4.RETURN ALL THE PRIME NUMBERS IN AN ARRAY
+
+ANONYMOUS
+            function(arr){
+            numArray=numArray.filter((number)=>{
+            for (var i=2;i<=Math.sqrt(number);
+            if (number % i===0)
+            return false;
+            }
+            return true;
+         });
+         console.log(numArray);
+     }
+     
+     IIFE
+     
+     ( function(arr){
+            numArray=numArray.filter((number)=>{
+            for (var i=2;i<=Math.sqrt(number);
+            if (number % i===0)
+            return false;
+            }
+            return true;
+         });
+         console.log(numArray);
+     };)([1,2,3,4]);
+     
+     ARROW FUNCTION
+                primenumber =(numArray)=>{
+                 
+            numArray=numArray.filter((number)=>{
+            for (var i=2;i<=Math.sqrt(number);
+            if (number % i===0)
+            return false;
+            }
+            return true;
+         });
+         console.log(numArray);
+     }
+     
+     
+     5.RETURN ALL THE PALINDROME INA AN ARRAY
+     
+     function is Palindrome(N)
+     {
+     let str="" + N;
+     let len =str.length;
+     for (let i=0;i< parseInt(len /2,10); i++)
+     {
+     
+        if(str[i] !=str[len -1 - i ])
+            return false;
+            
+            }
+            return true;
+         }
+         
+         
+   ANONYMOUS Function :function (arr,n)
+   {
+   //Travelling each element of the array
+   // And check if it is palindrome or not
+   for(let i=0;i<n;i++)
+   {let res=isPalindrome(arr[i]);
+   if(res ==false)
+    return false;
+    }
+    return true;
+  }
+  
+  
+  IIFE   :(function (arr,n)
+   {
+   //Travelling each element of the array
+   // And check if it is palindrome or not
+   for(let i=0;i<n;i++)
+   {let res=isPalindrome(arr[i]);
+   if(res ==false)
+    return false;
+    }
+    return true;
+  })([1,2,3] ,3);
+  
+  
+  ARROW FUNCTION  :
+             
+Palindrome=(arr , n)=>
+{
+   //Travelling each element of the array
+   // And check if it is palindrome or not
+   for(let i=0;i<n;i++)
+   {let res=isPalindrome(arr[i]);
+   if(res ==false)
+    return false;
+    }
+    return true;
+  }
+  
+  Q.RETURN MEDIAN OF TWO SORTED ARRAYS OF SAME SIZE
+  Q.REMOVE DUPLICATES FRAM AN ARRAY.
+  ANONYMOUS
+  function(arr){
+  let dup =[...new Set(arr)];
+  console.log(dup);
+  }
+  
+  IIFE
+  (function(arr){
+  let dup =[...new Set(arr)];
+  console.log(dup);
+  })([1,1,2,3,4])
+  
+  
+  
+  Arrow
+  sorted=(arr)=>{
+  
+  let dup =[...new Set(arr)];
+  console.log(dup);
+  }
+  Q. ROTATE AN ARRAY BY K TIMES
+  
+  function reverse(arr , li, ri){
+  while(li <ri){
+  int temp=a[li];
+  a[li]=a[ri];
+  a[ri]=temp;
+  
+  li++;
+  ri--;
+  }
+}
+
+ANONYMOUS FUNCTION  :function(arr, k){
+                      k=k % a.length;
+                      if(k<0){
+                      k+ = a.length;
+                      }
+                      
+                      reverse(a, 0, a.length -k -1);
+                      reverse(a, a.length -k, a.length -1);
+                      reverse(a, 0, a.length -1);
+                   }
+                   
+IIFE            :(function(arr, k){
+                      k=k % a.length;
+                      if(k<0){
+                      k+ = a.length;
+                      }
+                      
+                      reverse(a, 0, a.length -k -1);
+                      reverse(a, a.length -k, a.length -1);
+                      reverse(a, 0, a.length -1);
+                      })([1,2,3,4] ,2);
+                      
+ ARROW            :let ktimes(arr)=>{
+                   
+                      k=k % a.length;
+                      if(k<0){
+                      k+ = a.length;
+                      }
+                      
+                      reverse(a, 0, a.length -k -1);
+                      reverse(a, a.length -k, a.length -1);
+                      reverse(a, 0, a.length -1);
+                      };
